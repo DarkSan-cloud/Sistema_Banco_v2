@@ -6,8 +6,7 @@ public class Cliente extends Pessoa {
     private Double saldo = 0.0;
     private String agencia;
     private int operacao;
-
-    
+    private String pendencia;
 
     Scanner leia = new Scanner(System.in);
 
@@ -35,6 +34,7 @@ public class Cliente extends Pessoa {
     public void setAgencia(String agencia) {
         this.agencia = agencia;
     }
+
     public int getOperacao() {
         return operacao;
     }
@@ -43,7 +43,13 @@ public class Cliente extends Pessoa {
         this.operacao = operacao;
     }
 
+    public String getPendencia() {
+        return pendencia;
+    }
 
+    public void setPendencia(String pendencia) {
+        this.pendencia = pendencia;
+    }
 
     // METODOS
     // SOBRE CARGA DO METODO PAGAR
@@ -91,8 +97,11 @@ public class Cliente extends Pessoa {
 
     // EXIBIR STATUS
     public void tirarExtrato() {
+        System.out.println("Nome: " + getNome());
         System.out.println("Saldo.: R$" + saldo);
-        System.out.println("Conta.:" + conta + "\n Agencia: " + agencia);
+        System.out.println("Conta.:" + conta);
+        System.out.println("Agencia: " + agencia);
+        System.out.println("Telefone: " + getTelefone());
 
     }
 
@@ -123,12 +132,12 @@ public class Cliente extends Pessoa {
                     String benefeciario = leia.next();
                     pagarSacar(benefeciario);
                     break;
-                case 5:
-                    System.out.println("Saindo...");
-                    return ;
-                    default:
-                    System.out.println("Opção invalida");
-                    break;
+                // case 5:
+                // System.out.println("Saindo...");
+                // break;
+                // default:
+                // System.out.println("Opção invalida");
+                // break;
             }
         }
     }

@@ -1,4 +1,4 @@
-public class Pessoa {
+public abstract class  Pessoa {
     //ATRIBUTOS
     private String nome;
     private String cpf;
@@ -57,5 +57,5 @@ public class Pessoa {
     }
     
     // METODOS
-    
+
 }
