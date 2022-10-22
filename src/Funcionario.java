@@ -6,6 +6,7 @@ public class Funcionario extends Cliente {
     private Double salario = 0.0;
     private String beneficios;
     private int opcao;
+    private String nivelAcesso;
 
     Scanner leia = new Scanner(System.in);
 
@@ -42,6 +43,14 @@ public class Funcionario extends Cliente {
         this.opcao = opcao;
     }
 
+    public String getNivelAcesso() {
+        return nivelAcesso;
+    }
+
+    public void setNivelAcesso(String nivelAcesso) {
+        this.nivelAcesso = nivelAcesso;
+    }
+
     // METODOS
     @Override
     public void exibirMenu() {
@@ -60,11 +69,11 @@ public class Funcionario extends Cliente {
                     Cadastrar();
                     break;
                 case 2:
-                  Editar();
-                break;
+                    Editar();
+                    break;
                 case 3:
-                Cobrar();
-                break;
+                    Cobrar();
+                    break;
                 case 4:
                     Receber();
                     break;
